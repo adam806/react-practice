@@ -1,7 +1,8 @@
 import React from 'react';
 // import JsxTest from "./JsxTest"
 // import CompType from "./CompType"
-import StateTest from "./StateTest"
+// import StateTest from "./StateTest"
+import CartSample from "./CartSample"
 
 import './App.css';
 
@@ -12,7 +13,9 @@ function App() {
       {/* <JsxTest></JsxTest> */}
       {/* 组件类型 */}
       {/* <CompType></CompType> */}
-      <StateTest></StateTest>
+      {/* <StateTest></StateTest> */}
+      {/* 购物车 */}
+      <CartSample></CartSample>
     </div>
   );
 }

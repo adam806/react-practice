@@ -21,7 +21,7 @@ class Clock extends Component {
       })
     }, 1000);
 
-    // 批量操作：对同一个key的操作会合并成为一次，即最后一次
+    //批量操作：对同一个key的操作会合并成为一次，即最后一次
     //在componentDidMount中，对state的操作可能是异步的，会在在最后统一执行，所以setState下面紧接着的log是不能准确获取到state中修改的值的。
     //为了准确获取state中修改的值，可以给setState传一个回调函数，在回调函数中获取state中被修改的最新的值
     this.setState({
@@ -47,25 +47,25 @@ class Clock extends Component {
       console.log('准确获取counter', this.state.counter)
     }, 0)
 
-    //还或者在原声事件中获取
+    //还或者在原生事件中获取
     document.body.addEventListener("click", this.changeCounter)
   }
 
   componentWillMount() {
     clearInterval(this.timer)
   }
-  changeCounter=()=>{ //用箭头函数是为了保持this的指向性
-  console.log('准确获取counter', this.state.counter)
-}
-render() {
-  return (
-    <div>
-      {this.state.date.toLocaleTimeString()}
-      <br></br>
-      {this.state.counter}
-    </div>
-  )
-}
+  changeCounter = () => { //用箭头函数是为了保持this的指向性
+    console.log('准确获取counter', this.state.counter)
+  }
+  render() {
+    return (
+      <div>
+        {this.state.date.toLocaleTimeString()}
+        <br></br>
+        {this.state.counter}
+      </div>
+    )
+  }
 }
 
 
