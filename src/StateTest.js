@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 
 class Clock extends Component {
   // 一 一和二都可以
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     date: new Date()
-  //   }
-  // }
-  //二 一和二都可以
-  state = {
-    date: new Date(),
-    counter: 1
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: new Date()
+    }
   }
+  //二 一和二都可以
+  // state = {
+  //   date: new Date(),
+  //   counter: 1
+  // }
   componentDidMount() {
     this.timer = setInterval(() => {
       //setState修改状态
