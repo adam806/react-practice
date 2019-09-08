@@ -19,7 +19,11 @@ import './App.css';
 
 // import HockTest from "./HockTest"
 
-import KFormTest from "./KFromTest"
+import KFormTest from "./KFormTest"
+import KFormTest2 from "./KFormTest2"
+import KFormTest3 from "./KFormTest3"
+
+
 
 
 function App() {
@@ -40,7 +44,11 @@ function App() {
       <ContextTest></ContextTest> */}
       {/* <HockTest></HockTest> */}
       {/* 组件设计与实现 */}
-      <KFormTest></KFormTest>
+      {/* <KFormTest></KFormTest> */}
+
+      {/* <KFormTest2></KFormTest2> */}
+      <KFormTest3></KFormTest3>
+
     </div>
   );
 }
