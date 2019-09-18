@@ -17,13 +17,14 @@ import './App.css';
 // import Composition from "./Composition"
 // import ContextTest from "./ContextTest"
 
-// import HockTest from "./HockTest"
+import HookTest from "./HookTest"
 
-import KFormTest from "./KFormTest"
-import KFormTest2 from "./KFormTest2"
-import KFormTest3 from "./KFormTest3"
+// import KFormTest from "./KFormTest"
+// import KFormTest2 from "./KFormTest2"
+// import KFormTest3 from "./KFormTest3"
 
-
+import store from "./store"
+import { Provider } from "react-redux" //用来作为上下文给组件提供数据
 
 
 function App() {
@@ -42,12 +43,14 @@ function App() {
       {/* <Hoc name="hoc"></Hoc>
       <Composition></Composition>
       <ContextTest></ContextTest> */}
-      {/* <HockTest></HockTest> */}
-      {/* 组件设计与实现 */}
+      <Provider store={store}>
+        <HookTest></HookTest>
+      </Provider>
+      {/* 组件设计与实现 */} 
       {/* <KFormTest></KFormTest> */}
 
       {/* <KFormTest2></KFormTest2> */}
-      <KFormTest3></KFormTest3>
+      {/* <KFormTest3></KFormTest3> */}
 
     </div>
   );
